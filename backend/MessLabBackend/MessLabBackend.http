@@ -1,0 +1,6 @@
+@MessLabBackend_HostAddress = http://localhost:5005
+
+GET {{MessLabBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
