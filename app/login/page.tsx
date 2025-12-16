@@ -25,29 +25,39 @@ export default function LoginPage() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans">
+        <div className="absolute top-20 left-10 text-9xl font-bold text-black/5 pointer-events-none">
+            Welcome to the MessLab.
+        </div>
         <form 
             onSubmit={handleLogin}
             className="flex flex-col gap-4 bg-white p-8 rounded-lg shadow-md w-80 items-center"
         >
             <h1 className="text-lg font-semibold text-black">Messlab Login</h1>
-
-            <input
-                type="text"
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
-                placeholder="Username"
-                className="border border-gray-300 p-2 rounded text-black"
-            />
-            <input
-                type="password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                placeholder="Password"
-                className="border border-gray-300 p-2 rounded text-black"
-            />
+            
+            <div className="flex flex-col gap-2 w-full">
+                <label htmlFor="username" className="text-black text-sm" >Username</label>
+                <input
+                    type="text"
+                    value={username}
+                    onChange={(e) => setUsername(e.target.value)}
+                    placeholder="Username"
+                    className="border border-gray-300 p-2 rounded text-black focus:outline-black focus:border-black"
+                />
+            </div>
+            
+            <div className="flex flex-col gap-2 w-full">
+                <label htmlFor="password" className="text-black text-sm" >Password</label>
+                <input
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                    placeholder="Password"
+                    className="border border-gray-300 p-2 rounded text-black focus:outline-black focus:border-black"
+                />
+            </div>
             <button
                 type="submit"
-                className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 cursor-pointer"
+                className="bg-black text-white p-2 rounded hover:bg-black/50 cursor-pointer w-full mt-4"
             >
                 Login
             </button>
