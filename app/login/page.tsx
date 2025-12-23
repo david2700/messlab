@@ -20,7 +20,12 @@ export default function LoginPage() {
     });
 
     const data = await res.json();
-    setMessage(data.message);
+    if (res.ok) {
+        console.log("Login successful:", data.id, data.username);
+        setMessage("Login successful!");
+    } else {
+        setMessage(data.message);
+    }
   }
 
   return (
