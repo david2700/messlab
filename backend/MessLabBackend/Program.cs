@@ -15,6 +15,8 @@ builder.Services.AddCors(options =>
     });
 });
 
+var connectionString = "Host=localhost;Username=mac;Password=;Database=messlab";
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
